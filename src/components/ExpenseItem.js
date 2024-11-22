@@ -1,11 +1,15 @@
 import'./ExpensesItem.css';
-const ExpensesItem = () => {
+const ExpensesItem = (props) => {
+
+    console.log(props)
+    console.log(props.date)
+
     return (
         <div className='expense-item'>
-            <div>Date</div>
+            <div>{props.data.date.toString()}</div>
             <div className='expense-item__description'>
-                <h2>Title</h2>
-                <div className='expense-item__price'>Price</div>
+                <h2>{props.data.title}</h2>
+                <div className='expense-item__price'>{props.data.price}</div>
             </div>
         </div>
     )
